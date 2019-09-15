@@ -1,0 +1,5 @@
+export const frontConstants = {
+   GET_MENU_REQUEST:        'GET_MENU_REQUEST',
+   GET_MENU_SUCCESS: 		'GET_MENU_SUCCESS',
+   GET_MENU_FAILURE: 		'GET_MENU_FAILURE',
+}
