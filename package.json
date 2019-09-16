@@ -1,7 +1,7 @@
 {
-  "name": "react_project",
+  "name": "react_server_client_side_rendering",
   "version": "1.0.0",
-  "description": "",
+  "description": "React SSR & CSR Rendering",
   "main": "index.js",
   "scripts": {
     "webpack:client": "webpack --config webpack.client.js --mode production",
@@ -11,7 +11,7 @@
     "dev-server": "rimraf client/client.bundle.js && cross-env NODE_ENV=development webpack --config webpack.config.js --mode production --open --hot && node client.js",
     "prod-server": "rimraf client/client.bundle.js && cross-env NODE_ENV=production webpack --mode production && node client.js"
   },
-  "author": "",
+  "author": "Avinash Kumar Singh",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.6.0",
