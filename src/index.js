@@ -5,7 +5,4 @@ import App from './app';
 
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 
-ReactDOM.hydrate(
-	<BrowserRouter>
-		<App />
-	</BrowserRouter>, document.getElementById('root'));
+ReactDOM.hydrate(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));

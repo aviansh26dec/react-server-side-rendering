@@ -10,7 +10,7 @@ class Home extends Component {
 	head(){
 		return(
 			<Helmet>
-				<title>Server Side Rendering</title>
+				<title>Server & Client Side Rendering</title>
 			</Helmet>
 		)
 	}
