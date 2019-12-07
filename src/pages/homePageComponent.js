@@ -27,3 +27,6 @@ class Home extends Component {
 }
 
 export default Home;
+// connect(mapStateToProps, {
+//   login, logout, register
+// }, null, { pure: false })(FrontLayout);

@@ -1,15 +1,5 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import rootReducer from './reducers';
+import { applyMiddleware, createStore } from "redux";
+import rootReducer from "./reducers";
+import reduxThunk from "redux-thunk";
 
-const intialState = {};
-
-const middleware = [thunk];
-
-if (!process.env.BROWSER) {
-	global.window = {}; // Temporarily define window for server-side
-}
-
-const store = createStore(rootReducer, intialState, compose(applyMiddleware(...middleware)));
-
-export default store;
+export default createStore(rootReducer, {}, applyMiddleware(reduxThunk));

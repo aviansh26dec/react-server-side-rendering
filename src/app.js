@@ -1,34 +1,39 @@
 import React from 'react';
-import { Switch, Route } from 'react-router';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import _ from "lodash";
 
 import FrontRoute from './routes/FrontRoute';
 import FrontLayout from './layout/FrontLayout';
-import Home from './pages/homePageComponent';
 
-class App extends React.Component {
-	render(){
-		return(
-			<Switch>
-				{_.map(FrontRoute, (route, key) => {
-	              const { component, path } = route;
-	              return (
-	                <Route
-	                  exact
-	                  path={path}
-	                  key={key}
-	                  render={route => (
-	                    <FrontLayout
-	                      component={component}
-	                      route={route}
-	                    />
-	                  )}
-	                />
-	              )
-	            })}
-			</Switch>
-		)
-	}
+function App() {
+  return (
+    <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Switch>
+            {_.map(FrontRoute, (route, key) => {
+              const { component, path } = route;
+              return (
+                <Route
+                  exact
+                  path={path}
+                  key={key}
+                  render={route => (
+                    <FrontLayout
+                      component={component}
+                      route={route}
+                    />
+                  )}
+                />
+              )
+            })}
+          </Switch>
+        </div>
+      </Router>
+    </Provider>
+  );
 }
 
 export default App;
